@@ -3,6 +3,9 @@ package com.example.mensaesswerkmenu
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.ArrayAdapter
+import android.widget.ListView
+import android.widget.SimpleAdapter
 import it.skrape.core.htmlDocument
 import it.skrape.fetcher.HttpFetcher
 import it.skrape.fetcher.extractIt
@@ -60,7 +63,20 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun FillMenuList(menu: MensaMenu) {
-        // TODO implement
+        var menuItems: ArrayList<HashMap<String, String>> = ArrayList()
+
+        for (item in menu.items) {
+            var itemMap: HashMap<String, String> = HashMap()
+
+            itemMap.put("name", item.name)
+            itemMap.put("price", item.price)
+
+            menuItems.add(itemMap)
+        }
+
+        val adapter = SimpleAdapter(this, menuItems, R.layout.menuitem_layout, arrayOf("name", "price"), intArrayOf(R.id.name, R.id.price))
+
+        findViewById<ListView>(R.id.menus).adapter = adapter
     }
 
 }
