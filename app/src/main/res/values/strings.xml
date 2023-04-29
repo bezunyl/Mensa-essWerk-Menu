@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Mensa essWerk Menu</string>
+    <string name="menu_url">https://www.swffm.de/essen-trinken/speiseplaene/mensa-esswerk</string>
 </resources>
