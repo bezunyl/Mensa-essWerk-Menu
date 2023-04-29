@@ -11,6 +11,17 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/menuTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Menu Name"
+            android:paddingVertical="12dip"
+            android:paddingHorizontal="10dip"
+            android:textSize="14pt"
+            android:textStyle="bold"
+            android:background="#f0f0f0"/>
+
         <ListView
             android:id="@+id/menus"
             android:layout_width="match_parent"

@@ -6,6 +6,7 @@ import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import android.widget.SimpleAdapter
+import android.widget.TextView
 import it.skrape.core.htmlDocument
 import it.skrape.fetcher.HttpFetcher
 import it.skrape.fetcher.extractIt
@@ -63,6 +64,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun FillMenuList(menu: MensaMenu) {
+        findViewById<TextView>(R.id.menuTitle).text = menu.date
+
         var menuItems: ArrayList<HashMap<String, String>> = ArrayList()
 
         for (item in menu.items) {
