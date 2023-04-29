@@ -53,9 +53,14 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
 
-                Log.d("Scraper", "Done.")
+                FillMenuList(results)
             }
+
         }
+    }
+
+    fun FillMenuList(menu: MensaMenu) {
+        // TODO implement
     }
 
 }
